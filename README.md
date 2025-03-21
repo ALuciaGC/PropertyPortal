@@ -20,6 +20,8 @@ This system supports a hybrid data environment and demonstrates the strengths of
 6. Translating the schema to MongoDB collections
 7. Evaluating query outputs and validating system integrity.
 
+![Project Workflow](images/workflow_diagram.png)
+
 ## 📊 Exploratory Data Overview
 This project extracts meaningful insights from a relational database through structured queries, including:
 - Distribution of property types across locations.
@@ -27,6 +29,7 @@ This project extracts meaningful insights from a relational database through str
 - Branch-wise staff allocation and performance.
 
 Example SQL query to analyze property pricing trends:
+```sql
 SELECT PLOCATION, AVG(PASKING_PRICE) AS AVG_PRICE
 FROM PROPERTY
 GROUP BY PLOCATION
@@ -48,6 +51,7 @@ ORDER BY AVG_PRICE DESC;
 - Complex Queries leveraging JOIN, GROUP BY, and AGGREGATE FUNCTIONS.
 
 Example SQL query:
+```sql
 SELECT S.SNAME, COUNT(V.VID) AS TOTAL_VIEWINGS
 FROM STAFF S
 JOIN EMPLOYMENT E ON S.SID = E.STAFF
@@ -61,6 +65,7 @@ GROUP BY S.SNAME;
 - Flexible Document-Based Storage for property listings.
 - Aggregation Pipelines for analysis.
 - Example Query: Find all available properties under $500,000
+```js
 db.properties.find({
   asking_price: { $lt: 500000 },
   availability: { $gte: new Date() }
