@@ -1,0 +1,6 @@
+-- Relational Algebra: Properties in London under £400,000
+σ_{PLOCATION='London' ∧ PASKING_PRICE < 400000}(PROPERTY)
+
+-- Relational Algebra: Customers who viewed more than 1 property
+γ_{CUSTOMER, COUNT(*)→NUM_VIEWINGS}(VIEWING)
+⨝_{NUM_VIEWINGS > 1}
