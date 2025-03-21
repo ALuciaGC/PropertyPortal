@@ -33,7 +33,7 @@ Example SQL query to analyze property pricing trends:
 SELECT PLOCATION, AVG(PASKING_PRICE) AS AVG_PRICE
 FROM PROPERTY
 GROUP BY PLOCATION
-ORDER BY AVG_PRICE DESC;
+ORDER BY AVG_PRICE DESC;```
 
 ## 🔧 Data Processing
 1. Normalization to 3rd Normal Form (3NF) to remove redundancy.
@@ -60,6 +60,7 @@ JOIN MANAGED_P MP ON B.BCODE = MP.BRANCH
 JOIN PROPERTY P ON MP.PROPERTY = P.PID
 JOIN VIEWING V ON P.PID = V.PROPERTY
 GROUP BY S.SNAME;
+```
 
 ### 🛠️ NoSQL Implementation (MongoDB)
 - Flexible Document-Based Storage for property listings.
@@ -70,3 +71,4 @@ db.properties.find({
   asking_price: { $lt: 500000 },
   availability: { $gte: new Date() }
 });
+```
