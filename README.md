@@ -1,7 +1,7 @@
 # 🏡 PropertyPortal: Real Estate Data Management System
 
 ## 📌 Motivation
-This project was developed as part of a university **Data Modeling and Analytics** course. It aims to design a comprehensive real estate database system that integrates both **relational (Oracle SQL)** and **non-relational (MongoDB)** models.
+This project aims to design a comprehensive real estate database system that integrates both **relational (Oracle SQL)** and **non-relational (MongoDB)** models.
 
 The goal was to simulate a real-world property management system that could handle information on properties, customers, staff, viewings, and contracts. Emphasis was placed on:
 - **Designing a normalized schema** to 3rd Normal Form (3NF)
