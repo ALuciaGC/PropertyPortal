@@ -73,3 +73,21 @@ db.properties.find({
   availability: { $gte: new Date() }
 });
 ```
+
+## 🎯 Key Insights
+
+📍 A Well-Normalized Schema Enables Complex Queries  
+Designing the database in 3NF made it easy to join related tables and run complex SQL queries, such as tracking staff performance or analyzing property availability by type and location.
+
+📍 Staff Performance Can Be Quantified Through Data  
+SQL joins and aggregations revealed which staff members closed the most deals, how many properties were sold or rented under their management, and overall branch activity.
+
+📍 Property Distribution Reflects Business Trends  
+Query results highlighted areas with higher listing volumes and revealed that certain property types (e.g. rentals) were more prevalent in specific regions.
+
+📍 Enforcing Referential Integrity Prevents Data Issues  
+Using foreign key constraints ensured consistency between related tables, but also required careful planning during data insertion and query testing.
+
+📍 Realistic Sample Data Brings the System to Life  
+Populating the schema with realistic test data enabled meaningful insights and demonstrated how the system could be used in a real-world business context.
+
